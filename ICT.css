@@ -1,0 +1,124 @@
+main{
+    background-image: url(history.jpg);
+    background-repeat: no-repeat;
+}
+
+.department-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.department-header {
+    text-align: center;
+    background: linear-gradient(135deg, #e1ad01, var(--secondary-color));
+    color: white;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.department-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.department-overview {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.overview-content {
+    flex: 2;
+    background-color:rgba(128, 0, 0, 0.772);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.overview-content h2{
+    background-color: #e1ad01;
+    border-radius: 2rem;
+    text-align: center;
+}
+.overview-content p{
+    background-color: #e1dfdf;
+    margin-top: 20px;
+    border-radius: 1rem;
+    text-align: center  ;
+    padding: 20px;
+}
+.overview-highlights {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.highlight-card {
+    background-color:rgba(128, 0, 0, 0.772);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.highlight-card h3{
+    background-color: #e1ad01;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+    text-align: center  ;
+    padding: 10px;
+}
+.highlight-card p{
+    background-color: #e1dfdf;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.highlight-card:hover {
+    transform: scale(1.05);
+}
+
+.department-courses {
+    background-color:rgba(128, 0, 0, 0.772);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.department-courses h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #e1ad01;
+    border-radius: 2rem;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.course-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+    .department-overview {
+        flex-direction: column;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+}

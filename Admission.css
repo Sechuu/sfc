@@ -1,0 +1,57 @@
+ main{
+    background-image: url(logowow2.png);
+    background-repeat: no-repeat;
+}
+
+.container {
+            width: 90%;
+            max-width: 1300px;
+            margin: 2rem auto;
+            background-color: rgba(128, 0, 0, 0.831);
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color:  #ffffff;
+            border-bottom: 3px solid #e1ad01;
+            padding-bottom: 0.8rem;
+            margin-bottom: 2rem;
+        }
+        .requirements-section {
+            background-color: #f9f9f9;
+            border-left: 5px solid #e1ad01;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .requirements-section:hover {
+            background-color: #f0f4f7;
+        }
+        .requirements-section h2 {
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        .desc {
+            list-style-type: none;
+        }
+        .desc li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .desc li::before {
+            content: '•';
+            color: #800000;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .note {
+            background-color: #e8f4f8;
+            border-left: 4px solid #e1ad01;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            font-style: italic;
+        }

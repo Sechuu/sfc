@@ -1,0 +1,96 @@
+main{
+    background-image: url(history.jpg);
+    background-repeat: no-repeat;
+    max-width: 1300px;
+}
+
+/* Administrators Container */
+.administrators-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Styles */
+.executive-leadership,
+.administrative-departments,
+.governance-structure {
+    background-color: rgba(128, 0, 0, 0.694);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.executive-leadership h2,
+.administrative-departments h2,
+.governance-structure h2 {
+    color: #f4f4f4;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    background-color: #e1ad01;
+    border-radius: 3rem;
+}
+
+/* Executive Leadership Grid */
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.admin-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.admin-card:hover {
+    transform: scale(1.05);
+}
+
+.admin-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+}
+
+.admin-details {
+    margin-top: 15px;
+    color: #f4f4f4;
+}
+
+.admin-details h3 {
+    color:#f4f4f4;
+    margin-bottom: 5px;
+}
+
+.admin-title {
+    font-style: italic;
+    color: #e1ad01;
+    margin-bottom: 10px;
+}
+
+.admin-bio {
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .leadership-grid,
+    .departments-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .governance-content {
+        flex-direction: column;
+    }
+
+    .admin-image img {
+        width: 200px;
+        height: 200px;
+    }
+}

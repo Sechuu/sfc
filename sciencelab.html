@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Ferdinand College-Cabagan -Science Laboratory</title>
+    <link rel="stylesheet" href="sciencelab.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="headerfooter.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!--Footer Logo-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+
+ <body>
+    <header>
+        <nav class="nav">
+            <a href="#" class="nav_logo">
+                <img src="logo.ico" alt="School Logo">
+                Saint Ferdinand<br>
+                College-Cabagan
+            </a>
+
+            <div class="nav_toggle">☰</div>
+
+            <ul class="nav_list">
+                <li><a href="WEB.html" class="nav_link">Home</a></li>
+                
+                <li class="dropdown_item">
+                    <a class="nav_link">About Us ▼</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="History.html" class="dropdown_link">History</a></li>
+                        <li><a href="Vission and Mission.html" class="dropdown_link">Vision and Mission</a></li>
+                        <li><a href="Administrators.html" class="dropdown_link">Administrators</a></li>
+                        <li><a href="Faculty.html" class="dropdown_link">School Faculty</a></li>
+                        <li><a href="Board of Directors.html" class="dropdown_link">Board of Directors</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown_item">
+                    <a class="nav_link">Admission ▼</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="Admission.html" class="dropdown_link">Admission Requirements</a></li>
+                        <li><a href="Enrollment.html" class="dropdown_link">Enrollment Procedure</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown_item">
+                    <a class="nav_link">Academics ▼</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="GradeSchool.html" class="dropdown_link">Grade School</a></li>
+                        <li><a href="JHS.html" class="dropdown_link">Junior Highschool</a></li>
+                        <li class="dropdown_item">
+                            <a class="dropdown_link">⮘Senior Highschool</a>  
+                            <ul class="dropdown_submenu">  
+                                <li><a href="ICT.html" class="dropdown_link">Information Computer and Technology</a></li>
+                                <li><a href="abm.html" class="dropdown_link">Accountancy Business and Management</a></li>
+                                <li><a href="humss.html" class="dropdown_link">Humanities and Social Sciences</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown_item">
+                    <a class="nav_link">Services ▼</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="complab.html" class="dropdown_link">Computer Laboratory</a></li>
+                        <li><a href="sciencelab.html" class="dropdown_link">Science Laboratory</a></li>
+                        <li><a href="GuidanceC.html" class="dropdown_link">Guidance Council</a></li>
+                        <li><a href="StudentAffairs.html" class="dropdown_link">Student Affairs</a></li>
+                        <li><a href="Library.html" class="dropdown_link">Library</a></li>
+                        <li><a href="#" class="dropdown_link">CCFM</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>    
+
+    <main>
+        <div class="container">
+            <div class="image-slider">
+                <div class="slider-container" id="sliderContainer">
+                    <div class="slide">
+                        <img src="sci1.png" alt="Laboratory Working Space">
+                        <div class="slide-description">
+                            Students collaborating during a computer science workshop
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="sci2.png" alt="Individual Workstations">
+                        <div class="slide-description">
+                            Individual workstations equipped with high-performance computers
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="sci3.png" alt="Group Project Area">
+                        <div class="slide-description">
+                            Group project area with collaborative computing resources
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevBtn">&#10094;</button>
+                    <button class="slider-btn" id="nextBtn">&#10095;</button>
+                </div>
+                <div class="slide-progress" id="slideProgress"></div>
+            </div>
+    
+            <div class="lab-details">
+                <div class="lab-details">
+                    <h2>Laboratory Safety Cautions</h2>
+                    
+                    <h3 style="margin-top: 20px; color: var(--primary-color); margin-bottom: 15px;">Personal Protective Equipment (PPE)</h3>
+                    <ul>
+                        <li>Always wear safety goggles to protect eyes from chemical splashes and debris</li>
+                        <li>Use lab coats to protect skin and clothing from chemical spills</li>
+                        <li>Wear closed-toe shoes and avoid loose clothing</li>
+                        <li>Use gloves when handling chemicals or biological materials</li>
+                    </ul>
+                
+                    <h3 style="margin-top: 20px; color: var(--primary-color); margin-bottom: 15px;">Chemical Safety</h3>
+                    <ul>
+                        <li>Read all chemical labels and safety data sheets carefully before use</li>
+                        <li>Never taste, touch, or smell chemicals directly</li>
+                        <li>Work in a well-ventilated area, especially with volatile substances</li>
+                        <li>Store chemicals properly in designated areas and segregate incompatible substances</li>
+                    </ul>
+
+                    <h3 style="margin-top: 20px; color: var(--primary-color); margin-bottom: 15px;">Equipment and Workspace Safety</h3>
+                    <ul>
+                        <li>Keep workspaces clean and organized</li>
+                        <li>Know the location of safety equipment like fire extinguishers, eye wash stations, and emergency showers</li>
+                        <li>Handle glassware carefully to prevent cuts</li>
+                        <li>Report any damaged equipment immediately</li>
+                        <li>Never work alone in the laboratory</li>
+                        <li>No eating, drinking, or applying cosmetics in the lab</li>
+                        <li>Wash hands thoroughly before leaving the laboratory</li>
+                    </ul>
+                
+                    <h3 style="margin-top: 20px; color: var(--primary-color); margin-bottom: 15px;">Key Features:</h3>
+                    <ul>
+                        <li>Dedicated areas for individual and group work</li>
+                        <li>Regular maintenance of equipment and facilities</li>
+                        <li>Comprehensive safety and organizational infrastructure</li>
+                        <li>Advanced technological equipment and specialized workstations</li>
+                        <li>Controlled environmental conditions for precise research</li>
+                        <li>Efficient waste management and disposal systems</li>
+                        <li>Robust electrical and utility support systems</li>
+                        <li>Comprehensive documentation and record-keeping capabilities</li>
+                        <li>Emergency preparedness and safety response mechanisms</li>
+                        <li>Flexible and adaptable workspace configurations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            // Previous JavaScript remains the same as in the original document
+            document.addEventListener('DOMContentLoaded', function() {
+                const sliderContainer = document.getElementById('sliderContainer');
+                const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+                const progressContainer = document.getElementById('slideProgress');
+                
+                const slides = document.querySelectorAll('.slide');
+                let currentSlide = 0;
+                const totalSlides = slides.length;
+        
+                // Create progress dots
+                slides.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('progress-dot');
+                    if (index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToSlide(index));
+                    progressContainer.appendChild(dot);
+                });
+        
+                const progressDots = document.querySelectorAll('.progress-dot');
+        
+                function moveSlider() {
+                    sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    
+                    // Update active progress dot
+                    progressDots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentSlide);
+                    });
+                }
+        
+                function goToSlide(slideIndex) {
+                    currentSlide = slideIndex;
+                    moveSlider();
+                    resetAutoSlide();
+                }
+        
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    moveSlider();
+                }
+        
+                function resetAutoSlide() {
+                    clearInterval(autoSlideInterval);
+                    autoSlideInterval = setInterval(nextSlide, 5000);
+                }
+        
+                // Manual navigation
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    resetAutoSlide();
+                });
+        
+                prevBtn.addEventListener('click', () => {
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    moveSlider();
+                    resetAutoSlide();
+                });
+        
+                // Auto sliding
+                let autoSlideInterval = setInterval(nextSlide, 5000);
+            });
+            
+        </script>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>St. Ferdinand College-Cabagan, Inc.</h3>
+            <p>Centro Cabagan, Isabela 3328, PH</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-phone"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                Programmed by <span style="color: maroon;"> Selena Salazar, Monique Guingab, Christian Neil, John Emil Malabad, Jehs Aggabao</span> |
+                2024 &copy; Saint Ferdinand College-Cabagan  
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

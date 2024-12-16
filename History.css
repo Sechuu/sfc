@@ -1,0 +1,63 @@
+/* History Section Styles */
+.history-section {
+    padding: 2rem 2rem 2rem 2rem;
+    background-image: url("history.jpg");
+    background-repeat: no-repeat;
+}
+.history-section h1{
+    background-color:  #e1ad01;
+    padding: 10px;
+    border-radius: 2px;
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 0rem;
+
+}
+
+.history-content {
+    display: flex;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color:rgba(128, 0, 0, 0.772);
+    border-radius: 2px;
+}
+
+.history-image {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.history-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.history-text {
+    flex: 1;
+}
+
+.history-text h1 {
+    font-size: 2.5rem;
+    color: #f4f4f4;
+    margin-bottom: 1.5rem;
+}
+
+.history-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+    .history-content {
+        flex-direction: column;
+    }
+
+    .history-image {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}

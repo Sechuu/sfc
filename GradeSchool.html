@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Ferdinand College-Cabagan - Elementary</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="GradeSchool.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="headerfooter.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!--Footer Logo-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="#" class="nav_logo">
+                <img src="logo.ico" alt="School Logo">
+                Saint Ferdinand<br>
+                College-Cabagan
+            </a>
+
+            <div class="nav_toggle">☰</div>
+
+            <ul class="nav_list">
+                <li><a href="WEB.html" class="nav_link">Home</a></li>
+                
+                <li class="dropdown_item">
+                    <a class="nav_link">About Us ▼</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="History.html" class="dropdown_link">History</a></li>
+                        <li><a href="Vission and Mission.html" class="dropdown_link">Vision and Mission</a></li>
+                        <li><a href="Administrators.html" class="dropdown_link">Administrators</a></li>
+                        <li><a href="Faculty.html" class="dropdown_link">School Faculty</a></li>
+                        <li><a href="Board of Directors.html" class="dropdown_link">Board of Directors</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown_item">
+                    <a class="nav_link">Admission ▼</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="Admission.html" class="dropdown_link">Admission Requirements</a></li>
+                        <li><a href="Enrollment.html" class="dropdown_link">Enrollment Procedure</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown_item">
+                    <a class="nav_link">Academics ▼</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="GradeSchool.html" class="dropdown_link">Grade School</a></li>
+                        <li><a href="JHS.html" class="dropdown_link">Junior Highschool</a></li>
+                        <li class="dropdown_item">
+                            <a class="dropdown_link">⮘Senior Highschool</a>  
+                            <ul class="dropdown_submenu">  
+                                <li><a href="ICT.html" class="dropdown_link">Information Computer and Technology</a></li>
+                                <li><a href="abm.html" class="dropdown_link">Accountancy Business and Management</a></li>
+                                <li><a href="humss.html" class="dropdown_link">Humanities and Social Sciences</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown_item">
+                    <a class="nav_link">Services ▼</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="complab.html" class="dropdown_link">Computer Laboratory</a></li>
+                        <li><a href="sciencelab.html" class="dropdown_link">Science Laboratory</a></li>
+                        <li><a href="GuidanceC.html" class="dropdown_link">Guidance Council</a></li>
+                        <li><a href="StudentAffairs.html" class="dropdown_link">Student Affairs</a></li>
+                        <li><a href="Library.html" class="dropdown_link">Library</a></li>
+                        <li><a href="#" class="dropdown_link">CCFM</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>     
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Elementary</h1>
+                <p>Nurturing Young Minds, Inspiring Future Leaders</p>
+            </section>
+    
+            <div class="grid">
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h2>Academics</h2>
+                    <p>Comprehensive curriculum designed to foster critical thinking and creativity.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"><img src="bkbelem.jpg"></div>
+                    <h2>Extracurricular</h2>
+                    <p>Wide range of activities to develop skills beyond the classroom.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h2>Community</h2>
+                    <p>Strong parent and community involvement in student education.</p>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>St. Ferdinand College-Cabagan, Inc.</h3>
+            <p>Centro Cabagan, Isabela 3328, PH</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-phone"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                Programmed by <span style="color: maroon;"> Selena Salazar, Monique Guingab, Christian Neil, John Emil Malabad, Jehs Aggabao</span> |
+                2024 &copy; Saint Ferdinand College-Cabagan  
+            </p>
+        </div>
+    </footer>
+
+    <script>
+
+        document.querySelectorAll('.drop-card').forEach(card => {
+          card.addEventListener('click', (e) => {
+              if (e.target.closest('.card-content')) return;
+              card.classList.toggle('active');
+          });
+      });
+      </script>
+</body>
+</html>

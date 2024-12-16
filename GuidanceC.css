@@ -1,0 +1,213 @@
+         .guidance-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .guidance-hero {
+            background-color: maroon;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .guidance-hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .guidance-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        .guidance-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 3em;
+            color: maroon;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: maroon;
+        }
+
+        /* Counselor Section */
+        .counselors {
+            background-color: white;
+            padding: 50px 20px;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .counselors h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: maroon;
+        }
+
+        .counselor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .counselor-card {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .counselor-card:hover {
+            transform: scale(1.05);
+        }
+
+        .counselor-card img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .counselor-card h3 {
+            margin-bottom: 10px;
+            color: maroon;
+        }
+
+        .counselor-card p {
+            color: #666;
+        }
+
+        /* Guidance & Counseling Calendar */
+        .guidance-calendar {
+            margin-top: 40px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .guidance-calendar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: maroon;
+        }
+
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .calendar-table th, .calendar-table td {
+            padding: 12px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .calendar-table th {
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+
+        /* Guidance & Counseling Program and Services */
+        .program-services {
+            margin-top: 40px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .program-services h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: maroon;
+        }
+
+        .program-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .program-service-card {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .program-service-card h3 {
+            margin-bottom: 15px;
+            color: maroon;
+        }
+
+        /* Objectives of the Guidance & Counseling Program */
+        .program-objectives {
+            margin-top: 40px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .program-objectives h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .program-objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .program-objective-card {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .program-objective-card h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .guidance-hero h1 {
+                font-size: 2em;
+            }
+        }
