@@ -14,6 +14,7 @@
             margin-bottom: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-color: maroon;
         }
 
         .ccfm-hero h1 {
@@ -36,7 +37,7 @@
         }
 
         .ccfm-about h2 {
-            color: #2c3e50;
+            color: maroon;
             margin-bottom: 20px;
         }
 
@@ -61,13 +62,13 @@
 
         .program-card i {
             font-size: 3em;
-            color: #2c3e50;
+            color: maroon;
             margin-bottom: 15px;
         }
 
         .program-card h3 {
             margin-bottom: 10px;
-            color: #2c3e50;
+            color: maroon;
         }
 
         .ccfm-team {
@@ -81,7 +82,7 @@
         .ccfm-team h2 {
             text-align: center;
             margin-bottom: 20px;
-            color: #2c3e50;
+            color: maroon;
         }
 
         .team-grid {
