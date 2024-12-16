@@ -231,5 +231,20 @@
             </p>
         </div>
     </footer>
+    
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // Navigation Toggle for Mobile
+        const navToggle = document.querySelector('.nav_toggle');
+        const navList = document.querySelector('.nav_list');
+        
+        if (navToggle && navList) {
+            navToggle.addEventListener('click', function() {
+                navList.classList.toggle('active');
+            });
+        }
+    });
+    </script>
 </body>
 </html>

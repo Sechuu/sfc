@@ -14,7 +14,38 @@
 body {
     background-color: rgb(239, 239, 239);
     padding-top: 60px;
-    
+    line-height: 1.6;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Responsive Images and Media */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Typography */
+html {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Flexible Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 header {
