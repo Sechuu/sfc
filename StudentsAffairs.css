@@ -71,6 +71,7 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
+            text-align: center;
         }
 
         .contact-info div {
