@@ -8,12 +8,30 @@
 }
 
 .nav_logo {
-    display: flex;
-    align-items: center;
+    display: flex; /* Keep items in a row */
+    align-items: center; /* Center items vertically */
     color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
     font-family: 'Old English Text MT', serif;
+}
+
+.logo {
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.text-container {
+    display: flex; /* Stack text elements vertically */
+    flex-direction: column; /* Ensure text is in a column layout */
+}
+
+.college-name {
+    font-family: 'Old English Text MT', serif;
+}
+
+.education-text {
+    color: #e1ad01; 
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .nav_logo img {
