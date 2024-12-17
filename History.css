@@ -1,8 +1,15 @@
-/* History Section Styles */
-.history-section {
+main{
     padding: 2rem 2rem 2rem 2rem;
     background-image: url("history.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center ;
+}
+
+/* History Section Styles */
+.history-section {
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 .history-section h1{
     background-color:  #e1ad01;
@@ -13,7 +20,9 @@
     margin-bottom: 0rem;
 
 }
-
+.history-section:hover {
+    transform: scale(1.05);
+}
 .history-content {
     display: flex;
     align-items: center;
@@ -33,6 +42,7 @@
     height: auto;
     border-radius: 5px;
 }
+
 
 .history-text {
     flex: 1;

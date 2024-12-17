@@ -90,6 +90,7 @@
             <button class="carousel-button next">❯</button>
         </div>
             <!-- Photo Gallery -->
+            <div class="fade-container">
         <section class="photo-gallery">
             <h2>Visit our Facebook Pages</h2>
             <div class="gallery-container">
@@ -131,36 +132,9 @@
                 </div>
             </div>
         </section>
-
-        <!-- Image Cards -->
-        <section class="image-cards">
-            <h2>Strands</h2>
-            <div class="cards-container">
-                <div class="card">
-                    <a href="ICT.html" class="card-a">
-                    <img src="ict.jpg" alt="Facility 1">
-                    <h3>Information Computer and Technology</h3>
-                    <p>integrates technology and computing to process, store, and share information using tools like computers, software, and networks. It drives innovation and connectivity across education, business, healthcare, and communication.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="abm.html" class="card-a">
-                    <img src="abm.jpg" alt="Facility 2">
-                    <h3>Accountancy Business and Management</h3>
-                    <p>focuses on skills and knowledge in finance, entrepreneurship, and management. It prepares students for careers in accounting, business operations, and leadership roles, fostering critical thinking and decision-making.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="humss.html" class="card-a">
-                    <img src="humss.jpg" alt="Facility 3">
-                    <h3>Humanities and Social Sciences </h3>
-                    <p>focuses on understanding human behavior, culture, and society. It prepares students for careers in education, communication, social work, and other fields that involve critical thinking, empathy, and interaction with people.</p>
-                    </a>
-                </div>
             </div>
-        </section>
-
          <!-- News and Events Section -->
+             <div class="fade-container">
          <section class="image-cards news-section">
             <h2>Latest News and Events</h2>
             <div class="cards-container news-grid">
@@ -204,6 +178,7 @@
                 </div>
             </div>
         </section>
+            </div>
     </main>
 
     <footer>
@@ -299,6 +274,34 @@
             window.addEventListener('resize', () => {
             updateSlider();
         });
+        
+          // Scroll Fade JavaScript
+          function handleScrollFade() {
+            const fadeContainers = document.querySelectorAll('.fade-container');
+            
+            fadeContainers.forEach(container => {
+                // Get the top of the viewport and the top of the element
+                const triggerBottom = window.innerHeight * 0.8;
+                const containerTop = container.getBoundingClientRect().top;
+                
+                // Add or remove active class based on scroll position
+                if (containerTop < triggerBottom) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        }
+
+        // Throttle scroll event to improve performance
+        let throttleTimer;
+        window.addEventListener('scroll', () => {
+            clearTimeout(throttleTimer);
+            throttleTimer = setTimeout(handleScrollFade, 50);
+        });
+
+        // Initial check on page load
+        handleScrollFade();
          </script>
 </body>
 </html>

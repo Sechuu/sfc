@@ -1,11 +1,11 @@
-     main {
+        main {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
 
         .ccfm-hero {
-            background-image: url('/api/placeholder/1200/400');
+            background-image: url(ccfm.png);
             background-size: cover;
             background-position: center;
             color: white;

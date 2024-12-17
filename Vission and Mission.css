@@ -19,6 +19,12 @@
     background-color:rgba(128, 0, 0, 0.772);
     border-radius: 2px;
     color: #f4f4f4;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.vision-section:hover,
+.mission-section:hover{
+    transform: scale(1.05);
 }
 
 .vision-section h2,
@@ -65,6 +71,12 @@
     margin: 0 20px;
     background-color:rgba(128, 0, 0, 0.772);
     border-radius: 2px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.core-values-section:hover,
+.school-hymn-section:hover{
+    transform: scale(1.05);
 }
 
 .core-values-section h2,

@@ -1,22 +1,21 @@
 .container {
-    width: 10 0%;
-    margin: 0 auto;
+    max-width: 1200pxx  ;
+    margin: 0  auto;
     display: flex;
     flex-direction: column;
     gap: 40px;
     padding: 30px;
 }
 
-/* Image Slider Redesign */
 .image-slider {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 500px;
     overflow: hidden;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     perspective: 1000px;
+    margin-top: 20px;
 }
 
 .slider-container {
@@ -41,7 +40,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.9);
+    filter: brightness(0.7);
+    transform: scale(1.02);
+    transition: transform var(--transition-speed) ease;
+}
+
+.slide:hover img {
+    transform: scale(1.05);
 }
 
 .slide-description {
@@ -51,8 +56,16 @@
     width: 100%;
     padding: 25px;
     text-align: center;
-    background: linear-gradient(transparent, rgb(153,0,0,1));
+    background: linear-gradient(transparent, rgba(153,0,0,0.8));
     color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all var(--transition-speed) ease;
+}
+
+.slide:hover .slide-description {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .slider-controls {
@@ -70,10 +83,16 @@
     background: rgba(255,255,255,0.2);
     border: none;
     color: white;
-    padding: 10px 15px;
+    padding: 15px 20px;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all var(--transition-speed) ease;
+    backdrop-filter: blur(5px);
+}
+
+.slider-btn:hover {
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.1);
 }
 
 .slide-progress {
@@ -86,17 +105,36 @@
     gap: 10px;
 }
 
-/* Lab Details Redesign */
+.progress-dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.progress-dot.active {
+    background-color: white;
+    width: 20px;
+    border-radius: 10px;
+}
+
+/* Lab Details Enhanced Design */
 .lab-details {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: box-shadow var(--transition-speed) ease;
+}
+
+.lab-details:hover {
+    box-shadow: 0 15px 50px rgba(0,0,0,0.12);
 }
 
 .lab-details h2 {
+    color: var(--primary-color);
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 25px;
@@ -114,7 +152,7 @@
 
 .lab-details ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 0;
     list-style: none;
@@ -123,26 +161,36 @@
 .lab-details ul li {
     position: relative;
     padding-left: 40px;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-speed) ease;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    padding-left: 50px;
+}
+
+.lab-details ul li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .lab-details ul li::before {
-    content: '•';
+    content: '✓';
     position: absolute;
-    left: 0;
-    color: var(--secondary-color);
-    font-size: 2em;
-    top: -5px;
+    left: 15px;
+    color: var(--primary-color);
+    font-size: 1.5em;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-/* Responsive Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 15px;
     }
 
     .image-slider {
-        height: 350px;
+        height: 300px;
     }
 
     .lab-details ul {
@@ -157,5 +205,59 @@
 @media (min-width: 1200px) {
     .lab-details ul {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.protocol-grid, .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+
+.protocol-card, .feature-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.protocol-card:hover, .feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.protocol-card i, .feature-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.workplace-framework .framework-steps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.framework-step {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
     }
 }

@@ -4,12 +4,18 @@
             padding: 20px;
         }
 
+        body{
+            background-image: url(studentaffairs.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:center ;
+        }
         h4{
             text-align: center;
         }
 
         .student-affairs-hero {
-            background-color: maroon;
+            background-color: rgba(128, 0, 0, 0.833);
             color: white;
             padding: 40px 20px;
             text-align: center;
