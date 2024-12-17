@@ -82,11 +82,14 @@
 
     <main>
         <div class="guidance-container">
+            <div class="fade-container">
             <section class="guidance-hero">
                 <h1>Guidance and Counseling Services</h1>
                 <p>Our Guidance Council is dedicated to supporting the holistic development of students, providing personal, academic, and career counseling to help each student reach their full potential.</p>
             </section>
+            </div>
 
+            <div class="fade-container">
             <section class="guidance-services">
                 <div class="service-card">
                     <i class="fas fa-book-reader"></i>
@@ -104,7 +107,9 @@
                     <p>Comprehensive career counseling to help students explore and prepare for their future paths.</p>
                 </div>
             </section>
+            </div>
 
+            <div class="fade-container">
             <section class="counselors">
                 <h2>Our Guidance Counselor</h2>
                 <div class="counselor-grid">
@@ -115,7 +120,9 @@
                     </div>
                 </div>
             </section>
+            </div>
 
+            <div class="fade-container">
             <section class="guidance-calendar">
                 <h2>Guidance & Counseling School Calendar of Activities</h2>
                 <table class="calendar-table">
@@ -239,7 +246,9 @@
                     </thead>
                 </table>
             </section>
+            </div>
 
+            <div class="fade-container">
             <section class="program-services">
                 <h2>Guidance & Counseling Program and Services</h2>
                 <div class="program-services-grid">
@@ -269,7 +278,9 @@
                     </div>
                 </div>
             </section>
+            </div>
 
+            <div class="fade-container">
             <section class="program-objectives">
                 <h2>Objectives of the Guidance & Counseling Program</h2>
                 <div class="program-objectives-grid">
@@ -304,6 +315,7 @@
                     </div>
                 </div>
             </section>
+            </div>
         </div>
     </main>
 
@@ -337,6 +349,34 @@
             });
         }
     });
+    
+            // Scroll Fade JavaScript
+            function handleScrollFade() {
+            const fadeContainers = document.querySelectorAll('.fade-container');
+            
+            fadeContainers.forEach(container => {
+                // Get the top of the viewport and the top of the element
+                const triggerBottom = window.innerHeight * 0.8;
+                const containerTop = container.getBoundingClientRect().top;
+                
+                // Add or remove active class based on scroll position
+                if (containerTop < triggerBottom) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        }
+
+        // Throttle scroll event to improve performance
+        let throttleTimer;
+        window.addEventListener('scroll', () => {
+            clearTimeout(throttleTimer);
+            throttleTimer = setTimeout(handleScrollFade, 50);
+        });
+
+        // Initial check on page load
+        handleScrollFade();
     </script>
 </body>
 </html>

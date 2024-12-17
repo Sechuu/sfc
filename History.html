@@ -79,6 +79,7 @@
     </header>    
 
     <main>
+        <div class="fade-container">
         <section class="history-section">
             <h1>History of Saint Ferdinand College-Cabagan</h1>
             <div class="history-content">
@@ -93,6 +94,7 @@
                 </div>
             </div>
         </section>
+        </div>
     </main>
 
     <footer>
@@ -125,6 +127,34 @@
             });
         }
     });
+    
+            // Scroll Fade JavaScript
+            function handleScrollFade() {
+            const fadeContainers = document.querySelectorAll('.fade-container');
+            
+            fadeContainers.forEach(container => {
+                // Get the top of the viewport and the top of the element
+                const triggerBottom = window.innerHeight * 0.8;
+                const containerTop = container.getBoundingClientRect().top;
+                
+                // Add or remove active class based on scroll position
+                if (containerTop < triggerBottom) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        }
+
+        // Throttle scroll event to improve performance
+        let throttleTimer;
+        window.addEventListener('scroll', () => {
+            clearTimeout(throttleTimer);
+            throttleTimer = setTimeout(handleScrollFade, 50);
+        });
+
+        // Initial check on page load
+        handleScrollFade();
     </script>
 </body>
 </html>

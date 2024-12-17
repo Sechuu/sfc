@@ -80,11 +80,14 @@
     </header>    
 
     <main>
+        <div class="fade-container">
         <section class="library-hero">
             <h1>Saint Ferdinand College Library</h1>
             <p>Your Gateway to Knowledge and Learning</p>
         </section>
+        </div>
 
+        <div class="fade-container">
         <section class="library-features">
             <div class="feature-card">
                 <i class="fas fa-book-open"></i>
@@ -110,12 +113,15 @@
                 <p>Printing, scanning, and photocopying facilities for students and faculty.</p>
             </div>
         </section>
+        </div>
 
+        <div class="fade-container">
         <section class="library-hours">
             <h2>Library Hours</h2>
             <p>Monday - Friday: 7:20 AM - 5:00 PM</p>
             <p>Closed on Weekends and Holidays</p>
         </section>
+        </div>
     </main>
 
     <footer>
@@ -148,6 +154,34 @@
             });
         }
     });
+    
+            // Scroll Fade JavaScript
+            function handleScrollFade() {
+            const fadeContainers = document.querySelectorAll('.fade-container');
+            
+            fadeContainers.forEach(container => {
+                // Get the top of the viewport and the top of the element
+                const triggerBottom = window.innerHeight * 0.8;
+                const containerTop = container.getBoundingClientRect().top;
+                
+                // Add or remove active class based on scroll position
+                if (containerTop < triggerBottom) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        }
+
+        // Throttle scroll event to improve performance
+        let throttleTimer;
+        window.addEventListener('scroll', () => {
+            clearTimeout(throttleTimer);
+            throttleTimer = setTimeout(handleScrollFade, 50);
+        });
+
+        // Initial check on page load
+        handleScrollFade();
     </script>
 </body>
 </html>

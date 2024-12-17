@@ -86,6 +86,7 @@
                 <p>Empowering Innovation Through Technology</p>
             </div>
     
+            <div class="fade-container">
             <section class="department-overview">
                 <div class="overview-content">
                     <h2>About ICT Department</h2>
@@ -112,7 +113,9 @@
                     </div>
                 </div>
             </section>
-    
+            </div>
+            
+            <div class="fade-container">
             <section class="department-courses">
                 <h2>Core Courses</h2>
                 <div class="courses-grid">
@@ -134,6 +137,7 @@
                     </div>
                 </div>
             </section>
+            </div>
         </div>
     </main>
 
@@ -167,6 +171,34 @@
             });
         }
     });
+    
+            // Scroll Fade JavaScript
+            function handleScrollFade() {
+            const fadeContainers = document.querySelectorAll('.fade-container');
+            
+            fadeContainers.forEach(container => {
+                // Get the top of the viewport and the top of the element
+                const triggerBottom = window.innerHeight * 0.8;
+                const containerTop = container.getBoundingClientRect().top;
+                
+                // Add or remove active class based on scroll position
+                if (containerTop < triggerBottom) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        }
+
+        // Throttle scroll event to improve performance
+        let throttleTimer;
+        window.addEventListener('scroll', () => {
+            clearTimeout(throttleTimer);
+            throttleTimer = setTimeout(handleScrollFade, 50);
+        });
+
+        // Initial check on page load
+        handleScrollFade();
     </script>
 </body>
 </html>

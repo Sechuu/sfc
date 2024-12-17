@@ -83,6 +83,7 @@
         <div class="container">
             <h1>General Requirements for Admission</h1>
             
+            <div class="fade-container">
             <div class="requirements-section">
                 <h2>Incoming Freshmen Requirements</h2>
                 <ul class="desc">
@@ -96,7 +97,9 @@
                     <li>Marriage certificate (photocopy if married)</li>
                 </ul>
             </div>
+            </div>
             
+            <div class="fade-container">
             <div class="requirements-section">
                 <h2>Transferees Requirements</h2>
                 <ul class="desc">
@@ -109,19 +112,24 @@
                     <li>Window-stamped letter envelop with the complete name and address of parents/guardian to whom the final rating card will be sent.</li>
                 </ul>
             </div>
+            </div>
             
+            <div class="fade-container">
             <div class="requirements-section">
                 <h2>Cross Enrollees Requirements</h2>
                 <ul class="desc">
                     <li>Permit to cross enroll from the Mother School indicating the subjects to be taken.</li>
                 </ul>
             </div>
+            </div>
             
+            <div class="fade-container">
             <div class="requirements-section">
                 <h2>Graduate School Requirements</h2>
                 <ul class="desc">
                     <li>For graduate studies, a Graduate Program Entrance Examination is taken and apersonal interview with the applicant is conducted by the GraduateProgram Coordinator and/or the College Dean.</li>
                 </ul>
+            </div>
             </div>
             
             <div class="note">
@@ -168,6 +176,34 @@
             });
         }
     });
+    
+            // Scroll Fade JavaScript
+            function handleScrollFade() {
+            const fadeContainers = document.querySelectorAll('.fade-container');
+            
+            fadeContainers.forEach(container => {
+                // Get the top of the viewport and the top of the element
+                const triggerBottom = window.innerHeight * 0.8;
+                const containerTop = container.getBoundingClientRect().top;
+                
+                // Add or remove active class based on scroll position
+                if (containerTop < triggerBottom) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        }
+
+        // Throttle scroll event to improve performance
+        let throttleTimer;
+        window.addEventListener('scroll', () => {
+            clearTimeout(throttleTimer);
+            throttleTimer = setTimeout(handleScrollFade, 50);
+        });
+
+        // Initial check on page load
+        handleScrollFade();
       </script>
 </body>
 </html>

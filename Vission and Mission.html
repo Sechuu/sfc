@@ -80,6 +80,7 @@
     </header>      
 
     <main>
+        <div class="fade-container">
         <section class="vision-mission-container">
             <div class="vision-section">
             <center><h2>Vision</h2>
@@ -96,7 +97,9 @@
             </center>
             </div>
         </section>
+        </div>
 
+        <div class="fade-container">
         <section class="core-values-container">
             <div class="core-values-section">
             <center><h2>Core Values</h2></center>
@@ -109,7 +112,9 @@
                 </ul>
             </div>
         </section>
+        </div>
 
+        <div class="fade-container">
         <section class="school-hymn-container">
             <div class="school-hymn-section">
             <center><h2>School Hymn</h2>
@@ -141,6 +146,7 @@
             </center>
             </div>
         </section>
+        </div>
     </main>
 
     <footer>
@@ -173,6 +179,34 @@
             });
         }
     });
+
+     // Scroll Fade JavaScript
+     function handleScrollFade() {
+            const fadeContainers = document.querySelectorAll('.fade-container');
+            
+            fadeContainers.forEach(container => {
+                // Get the top of the viewport and the top of the element
+                const triggerBottom = window.innerHeight * 0.8;
+                const containerTop = container.getBoundingClientRect().top;
+                
+                // Add or remove active class based on scroll position
+                if (containerTop < triggerBottom) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        }
+
+        // Throttle scroll event to improve performance
+        let throttleTimer;
+        window.addEventListener('scroll', () => {
+            clearTimeout(throttleTimer);
+            throttleTimer = setTimeout(handleScrollFade, 50);
+        });
+
+        // Initial check on page load
+        handleScrollFade();
     </script>
 </body>
 </html>

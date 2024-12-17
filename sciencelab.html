@@ -111,9 +111,12 @@
             </div>
     
             <div class="lab-details">
+                <div class="fade-container">
                 <h2>Science Laboratory Safety and Workplace Standards</h2>
                 <p>Our science laboratory is committed to maintaining the highest standards of safety, health, and scientific excellence to ensure a productive and secure learning environment.</p>
-                
+                </div>
+
+                <div class="fade-container">            
                 <div class="content-grid">
                     <section class="safety-protocols">
                         <h2>Occupational Health and Safety Protocols</h2>
@@ -181,6 +184,7 @@
                         </div>
                     </section>
                     <br><br>
+                    <div class="fade-container">
                     <section class="workplace-framework">
                         <h2>5S Clean Workplace Framework</h2>
                         <div class="framework-steps">
@@ -211,8 +215,11 @@
                             </div>
                         </div>
                     </section>
+                    </div>
+                </div>
                 </div>
                 <br><br>
+                <div class="fade-container">
                 <section class="key-features">
                     <h2>Laboratory Key Features</h2>
                     <div class="features-grid">
@@ -230,6 +237,7 @@
                         </div>
                     </div>
                 </section>
+                </div>
             </div>
         </div>
     
@@ -307,6 +315,34 @@
                     });
                 }
             });
+
+            // Scroll Fade JavaScript
+     function handleScrollFade() {
+            const fadeContainers = document.querySelectorAll('.fade-container');
+            
+            fadeContainers.forEach(container => {
+                // Get the top of the viewport and the top of the element
+                const triggerBottom = window.innerHeight * 0.8;
+                const containerTop = container.getBoundingClientRect().top;
+                
+                // Add or remove active class based on scroll position
+                if (containerTop < triggerBottom) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        }
+
+        // Throttle scroll event to improve performance
+        let throttleTimer;
+        window.addEventListener('scroll', () => {
+            clearTimeout(throttleTimer);
+            throttleTimer = setTimeout(handleScrollFade, 50);
+        });
+
+        // Initial check on page load
+        handleScrollFade();
         </script>
     </main>
 

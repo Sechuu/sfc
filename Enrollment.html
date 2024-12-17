@@ -83,6 +83,7 @@
         <div class="container">
           <h1>Enrollment Procedures</h1>
           
+          <div class="fade-container">
           <div class="enrollment-section">
               <h2>Incoming Freshmen Enrollment Procedure</h2>
               <div class="timeline">
@@ -96,7 +97,9 @@
                   <div class="step">Register for first-semester classes</div>
               </div>
           </div>
-          
+          </div>
+
+          <div class="fade-container">
           <div class="enrollment-section">
               <h2>Current Freshmen Students Enrollment Procedure</h2>
               <div class="timeline">
@@ -110,7 +113,9 @@
                   <div class="step">Obtain student registration form</div>
               </div>
           </div>
+          </div>
           
+          <div class="fade-container">
           <div class="enrollment-section">
               <h2>Old Students Enrollment Procedure</h2>
               <div class="timeline">
@@ -124,7 +129,9 @@
                   <div class="step">Confirm final class schedule</div>
               </div>
           </div>
-          
+          </div>
+
+          <div class="fade-container">
           <div class="enrollment-section">
               <h2>Transferees Enrollment Procedure</h2>
               <div class="timeline">
@@ -138,6 +145,7 @@
                   <div class="step">Pay transfer and enrollment fees</div>
                   <div class="step">Register for appropriate courses</div>
               </div>
+          </div>
           </div>
           
           <div class="important-note">
@@ -183,6 +191,34 @@
             });
         }
     });
+    
+            // Scroll Fade JavaScript
+            function handleScrollFade() {
+            const fadeContainers = document.querySelectorAll('.fade-container');
+            
+            fadeContainers.forEach(container => {
+                // Get the top of the viewport and the top of the element
+                const triggerBottom = window.innerHeight * 0.8;
+                const containerTop = container.getBoundingClientRect().top;
+                
+                // Add or remove active class based on scroll position
+                if (containerTop < triggerBottom) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        }
+
+        // Throttle scroll event to improve performance
+        let throttleTimer;
+        window.addEventListener('scroll', () => {
+            clearTimeout(throttleTimer);
+            throttleTimer = setTimeout(handleScrollFade, 50);
+        });
+
+        // Initial check on page load
+        handleScrollFade();
       </script>
 </body>
 </html>

@@ -81,11 +81,14 @@
     </header>  
 
     <main>
+        <div class="fade-container">
         <section class="ccfm-hero">
             <h1>Campus Christian Formation Ministry</h1>
             <p>Inspiring Faith, Community, and Spiritual Growth</p>
         </section>
+        </div>
 
+        <div class="fade-container">
         <section class="ccfm-about">
             <h2>About the CCFM</h2>
             <p>The Campus Christian Formation Ministry (CCFM) is a vibrant community dedicated to fostering the spiritual growth and faith development of students, faculty, and staff at Saint Ferdinand College-Cabagan. Through various programs and initiatives, we aim to create a nurturing environment where individuals can explore their beliefs, deepen their relationship with God, and build meaningful connections with one another.
@@ -97,7 +100,9 @@
                 2.Social orientation/Apostle (love of preference for the poor) i.e. outreach programs, exposure-immersion programs, JPIC issues ad concerns, etc.
             </p>
         </section>
+        </div>
 
+        <div class="fade-container">
         <section class="ccfm-programs">
             <div class="program-card">
                 <i class="fas fa-bible"></i>
@@ -120,7 +125,9 @@
                 <p>Outreach and volunteer initiatives to serve the local community.</p>
             </div>
         </section>
-
+        </div>
+        
+        <div class="fade-container">
         <section class="ccfm-team">
             <h2>Meet the CCFM Head</h2>
             <div class="team-grid">
@@ -131,6 +138,7 @@
                 </div>
             </div>
         </section>
+        </div>
     </main>
 
     <footer>
@@ -163,6 +171,34 @@
             });
         }
     });
+    
+            // Scroll Fade JavaScript
+            function handleScrollFade() {
+            const fadeContainers = document.querySelectorAll('.fade-container');
+            
+            fadeContainers.forEach(container => {
+                // Get the top of the viewport and the top of the element
+                const triggerBottom = window.innerHeight * 0.8;
+                const containerTop = container.getBoundingClientRect().top;
+                
+                // Add or remove active class based on scroll position
+                if (containerTop < triggerBottom) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        }
+
+        // Throttle scroll event to improve performance
+        let throttleTimer;
+        window.addEventListener('scroll', () => {
+            clearTimeout(throttleTimer);
+            throttleTimer = setTimeout(handleScrollFade, 50);
+        });
+
+        // Initial check on page load
+        handleScrollFade();
     </script>
 </body>
 </html>

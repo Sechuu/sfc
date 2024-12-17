@@ -81,11 +81,14 @@
     </header>    
 
     <main>
+        <div class="fade-container">
         <section class="student-affairs-hero">
             <h1>Student Affairs Office</h1>
             <p>Committed to Supporting Student Growth and Success</p>
         </section>
+        </div>
 
+        <div class="fade-container">
         <section class="student-services">
             <div class="service-card">
                 <i class="fas fa-hands-helping"></i>
@@ -111,7 +114,9 @@
                 <p>Ensuring a safe, inclusive, and supportive environment for all students.</p>
             </div>
         </section>
-
+        </div>
+        
+        <div class="fade-container">
         <section class="contact-section">
             <h2>Contact Student Affairs</h2>
             <div class="contact-info">
@@ -130,7 +135,9 @@
                 </div>
             </div>
         </section>
+        </div>
 
+        <div class="fade-container">
         <section class="contact-section">
             <h2>Student Affairs OFFICE</h2>
             <div>
@@ -139,6 +146,7 @@
                 </h4>
             </div>
         </section>
+        </div>
     </main>
 
     <footer>
@@ -171,6 +179,33 @@
             });
         }
     });
+    // Scroll Fade JavaScript
+    function handleScrollFade() {
+            const fadeContainers = document.querySelectorAll('.fade-container');
+            
+            fadeContainers.forEach(container => {
+                // Get the top of the viewport and the top of the element
+                const triggerBottom = window.innerHeight * 0.8;
+                const containerTop = container.getBoundingClientRect().top;
+                
+                // Add or remove active class based on scroll position
+                if (containerTop < triggerBottom) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        }
+
+        // Throttle scroll event to improve performance
+        let throttleTimer;
+        window.addEventListener('scroll', () => {
+            clearTimeout(throttleTimer);
+            throttleTimer = setTimeout(handleScrollFade, 50);
+        });
+
+        // Initial check on page load
+        handleScrollFade();
     </script>
 </body>
 </html>

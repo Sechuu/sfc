@@ -81,18 +81,21 @@
 
     <main>
         <div class="container">
+            <div class="fade-container">
             <section class="hero">
                 <h1>Elementary</h1>
                 <p>Nurturing Young Minds, Inspiring Future Leaders</p>
             </section>
+            </div>
     
+            <div class="fade-container">
             <div class="grid">
                 <div class="card">
                     <div class="card-image"><img src="elem1.jpeg"></div>
                     <h2>Academics</h2>
                     <p>Comprehensive curriculum designed to foster critical thinking and creativity.</p>
                 </div> 
-                
+
                 <div class="card">
                     <div class="card-image"><img src="extraculelem.jpg"></div>
                     <h2>Extracurricular</h2>
@@ -104,6 +107,7 @@
                     <h2>Community</h2>
                     <p>Strong parent and community involvement in student education.</p>
                 </div>  
+            </div>
             </div>
         </div>
     </main>
@@ -145,6 +149,34 @@
             });
         }
     });
+    
+            // Scroll Fade JavaScript
+            function handleScrollFade() {
+            const fadeContainers = document.querySelectorAll('.fade-container');
+            
+            fadeContainers.forEach(container => {
+                // Get the top of the viewport and the top of the element
+                const triggerBottom = window.innerHeight * 0.8;
+                const containerTop = container.getBoundingClientRect().top;
+                
+                // Add or remove active class based on scroll position
+                if (containerTop < triggerBottom) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        }
+
+        // Throttle scroll event to improve performance
+        let throttleTimer;
+        window.addEventListener('scroll', () => {
+            clearTimeout(throttleTimer);
+            throttleTimer = setTimeout(handleScrollFade, 50);
+        });
+
+        // Initial check on page load
+        handleScrollFade();
       </script>
 </body>
 </html>
